@@ -7,7 +7,7 @@ public class app {
 		String[] sub =str.split("");
 	  int sum = 0;
 		for (var j =0;j<sub.length;j++) {
-			System.out.println(sub[j]);
+	
 			if (sub[j].contains("a") || sub[j].contains("e") ||sub[j].contains("i")||sub[j].contains("o")||sub[j].contains("u"))
 					{
       sum = sum + 1;
