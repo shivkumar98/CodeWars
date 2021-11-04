@@ -1,27 +1,37 @@
 package CreatePhoneNumber;
 
+import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+// convert integer array into phone number style string
+// e.g. {1,2,3,4,5,6,7,8,9,0} becomes "(123) 456-7890
+
 public class app {
 	  public static String createPhoneNumber(int[] numbers) {
-	
-		  String numberString = IntStream.of(numbers)
-                  .mapToObj(String::valueOf)
-                  .collect(Collectors.joining(""));
-
-		  System.out.println(numberString);
-		    StringBuffer sb = new StringBuffer();
-		    	   
+		  
+		  StringBuffer sb = new StringBuffer();
+		  
+		  sb.append("(");
+		  
+		  for (var i =0; i<3;i++) {
+			  sb.append(String.valueOf(numbers[i]));
+		  }
+		  
+		  sb.append(") ");
+		  
+		  for (var i =3; i<6;i++) {
+			  sb.append(String.valueOf(numbers[i]));
+		  }
+		  
+		  sb.append("-");
+		  
+		  for (var i =6; i<10;i++) {
+			  sb.append(String.valueOf(numbers[i]));
+		  }
 		 
-		    sb.append("(");
-		    sb.append(numberString.substring(0, 3));
-		    sb.append(")");
-		    sb.append(" ");
-		    sb.append(numberString.substring(3, 6));
-		    sb.append("-");
-		    sb.append(numberString.substring(6,10 ));
-		    return sb.toString();
+		  return sb.toString();
+		  
 		  }
 
 	public static void main(String[] args) {

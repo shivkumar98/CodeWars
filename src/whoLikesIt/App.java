@@ -9,7 +9,7 @@ public class App {
 	        	string.append("like it");
 	        }
 	        
-	        .
+	        
 	        
 	        
 	        return "";
