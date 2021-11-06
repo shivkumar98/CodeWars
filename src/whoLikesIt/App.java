@@ -1,23 +1,52 @@
 package whoLikesIt;
 
 public class App {
+private static String whoLikesIt() {
+		
+		return "no one likes it";
+	}
+
 	   public static String whoLikesIt(String[] names) {
-	        StringBuffer string = new StringBuffer();
-	        if (string.length()==0 ||string.length()==1) {
-	        	string.append("likes it");
+	        StringBuffer stringBuffer = new StringBuffer();
+	     
+	        if (names.length == 1) {
+	        	stringBuffer.append(names[0]+ " ");
+	        }
+	        
+	      
+	        
+	        if (names.length == 2) {
+	        	stringBuffer.append(names[0] + " and "+names[1] + " ");
+	        }
+	        
+	        if (names.length == 3) {
+	        	stringBuffer.append(names[0]+", "+ names[1]+" and "+names[2]+" ");
+	        }
+	        
+	        if (names.length > 3) {
+	        	stringBuffer.append(names[0]+ " and "+names[1]+" and "
+	        			+Integer.toString(names.length-2)
+	        			+ " others ");
+	        	
+	        }
+	        
+	        if (names.length==1) {
+	        	stringBuffer.append("likes it");
 	        } else {
-	        	string.append("like it");
+	        	stringBuffer.append("like it");
 	        }
 	        
 	        
 	        
 	        
-	        return "";
+	        return stringBuffer.toString();
 	   }
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
+		System.out.println(whoLikesIt(new String[]{"shiv"}));
 
 	}
 
+	
 }
