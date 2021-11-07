@@ -26,7 +26,7 @@ public class App {
 		  
 		  for (var i = 0; i <integers.length; i ++) {
 			  largest = Math.max(largest, integers[i]);
-			  System.out.println(integers.length);
+			
 			  smallest = Math.min(smallest, integers[i]);
 		  }
 		  
