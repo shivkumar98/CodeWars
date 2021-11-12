@@ -3,7 +3,7 @@ package Square;
 public class App {
 	
 	public static boolean isSquare(int n) {        
-		if (Math.ceil(Math.sqrt(n))*Math.ceil(Math.sqrt(n))) {
+		if (Math.ceil(Math.sqrt(n))*Math.ceil(Math.sqrt(n))==n) {
 			return true;
 		} else {
 			return false;
